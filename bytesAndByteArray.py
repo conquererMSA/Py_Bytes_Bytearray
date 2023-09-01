@@ -26,4 +26,22 @@ bytesDataInt=bytes(dataInt)
 arrData=[31,4,5]
 arrDataBytes=bytes(arrData)
 # print(arrDataBytes) #b'\x1f\x04\x05'
-print(bytes([31]))
+# print(bytes([31]))
+
+#looping on bytes
+b=bytes([13,44,64])
+# print(b) # b'\r,@'
+# for bValue in b:
+#   print(bValue) #13,34,67
+# del b
+# print(b) # NameError: name 'b' is not defined
+
+arrData2=[23,56,78]
+# print(arrData2[0:2]) # [23, 56]
+b2=bytes(arrData2)
+# print(b2[1]) #56
+# print(b2[0:2]) #b'\x178' bytes representation for sequence of [23,56]
+for byteItem in b2[0:2]:
+    print(byteItem) # 20 30
+
+print(b2[1:2]) # b'8'
