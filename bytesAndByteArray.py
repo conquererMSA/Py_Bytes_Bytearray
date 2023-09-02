@@ -56,12 +56,23 @@ dtByteArray=bytearray(dt)
 #bytes() and bytearray() same result return kore.
 
 char=97
-print(bytes([char]))
-print(chr(char))
+# print(bytes([char]))
+# print(chr(char))
+# chr(unicode/ascii)=>charecter, bytes([unicode, ascii])=>b'charecter'
 # bytes([char]) and chr(char) function same result return kore. Tobe ekti
 # unicode/ascii value diye chr(97) ekti charecter pawya zay.
 # Kintu bytes([97,98,99]) function diye eksathe onek gulu charecter byte
 # representation e pawya zay. b'abc' for bytes([97,98,99])
+
+charList=[65,97,100,112]
+charBytes=bytes(charList)
+# print(charBytes) # b'Aadp'
+for byteChar in charBytes:
+    pass
+    # print(bytes([byteChar])) # b'A' b'a' b'd' b'p'
+charHalf=charBytes[1:3]
+# print(charHalf) # b'ad'
+
 
 
 
