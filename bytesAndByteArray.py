@@ -42,6 +42,26 @@ b2=bytes(arrData2)
 # print(b2[1]) #56
 # print(b2[0:2]) #b'\x178' bytes representation for sequence of [23,56]
 for byteItem in b2[0:2]:
-    print(byteItem) # 20 30
+    pass
+    # print(byteItem) # 20 30
 
-print(b2[1:2]) # b'8'
+# print(b2[1:2]) # b'8'
+
+# started bytearray
+dt=[43,78,34]
+dtBytes=bytes(dt)
+# print(dtBytes) # b'+N"'
+dtByteArray=bytearray(dt)
+# print(dtByteArray) # bytearray(b'+N"')
+#bytes() and bytearray() same result return kore.
+
+char=97
+print(bytes([char]))
+print(chr(char))
+# bytes([char]) and chr(char) function same result return kore. Tobe ekti
+# unicode/ascii value diye chr(97) ekti charecter pawya zay.
+# Kintu bytes([97,98,99]) function diye eksathe onek gulu charecter byte
+# representation e pawya zay. b'abc' for bytes([97,98,99])
+
+
+
