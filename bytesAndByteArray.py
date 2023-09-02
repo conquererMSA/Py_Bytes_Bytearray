@@ -1,3 +1,4 @@
+from sys import getsizeof
 '''
 bytes() and bytearray() function they are return byte value of a integer or array of
 integer.
@@ -78,7 +79,7 @@ charListBytearray=bytearray(charList)
 #convert string to byte
 name='MSA'
 byteName=bytes(name,encoding='utf-8')
-print(byteName) # b'MSA'
+# print(byteName) # b'MSA'
 byteArrName=bytearray(name,encoding='utf-8')
 # print(byteArrName) # bytearray(b'MSA')
 # byteName[0]='N' # TypeError: 'bytes' object does not support item assignment
@@ -98,6 +99,31 @@ bIndex=char2Byte.index(b'B')
 # print(bIndex) # 1
 char2Byte.append(97)
 # print(char2Byte) # bytearray(b'ABCDa')
+
+#compare memmory consumtion  between list and bytearray
+newList=[1,23,45,67]
+# print(newList)
+# print(getsizeof(newList)) # 88
+newListByte=bytearray(newList)
+# print(newListByte)
+# print(getsizeof(newListByte)) # 61
+
+# decode and encoding
+'''
+Python object=>byte e convert korar jonno encoding use kori.
+Python object ke encoding korar jonno bytes and btearray method use kora hoy.
+
+converted byte theke normsl python object korar jonno orthat decode korar jonno 
+byteStr.ecode() method use kora hoy.
+
+'''
+nameStr='Muhammad SA'
+nameStrByte=bytearray(nameStr,encoding='utf-8')
+# print(nameStrByte) # bytearray(b'Muhammad SA')
+normalNameStr=nameStrByte.decode()
+# print(normalNameStr) # Muhammad SA
+
+
 
 
 
