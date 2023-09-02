@@ -72,6 +72,32 @@ for byteChar in charBytes:
     # print(bytes([byteChar])) # b'A' b'a' b'd' b'p'
 charHalf=charBytes[1:3]
 # print(charHalf) # b'ad'
+charListBytearray=bytearray(charList)
+# print(charListBytearray) # bytearray(b'Aadp') same as bytes() function
+
+#convert string to byte
+name='MSA'
+byteName=bytes(name,encoding='utf-8')
+print(byteName) # b'MSA'
+byteArrName=bytearray(name,encoding='utf-8')
+# print(byteArrName) # bytearray(b'MSA')
+# byteName[0]='N' # TypeError: 'bytes' object does not support item assignment
+
+# bytearray is a mutable data type: assignment and modification are acceptable
+# byteArrName[0]=b'G' # TypeError: 'bytes' object cannot be interpreted as an integer
+byteArrName[0]=71
+# print(byteArrName) # bytearray(b'GSA')
+# bytearray te indexing diye kuno charecter modify korte hole assignment e unicode
+# othoba ascii value dite hobe.
+# like byteArrName[index]=charUnicode/ASCIIValue
+
+# bytearray te list er sob method apply kora zay:
+char2=[65,66,67,68]
+char2Byte=bytearray(char2)
+bIndex=char2Byte.index(b'B')
+# print(bIndex) # 1
+char2Byte.append(97)
+# print(char2Byte) # bytearray(b'ABCDa')
 
 
 
